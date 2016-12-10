@@ -12,8 +12,6 @@ var args = [
   path.join(__dirname, '../src/index.js'),
 ];
 
-console.log(process.argv);
-
 process.argv.slice(2).forEach(function (arg, idx, arr) {
   switch (arg) {
     case '-p':
