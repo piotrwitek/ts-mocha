@@ -1,45 +1,46 @@
 {
   "name": "ts-mocha",
   "version": "0.1.1",
-  "description": "Mocha wrapped in TypeScript for easy use in TypeScript Projects",
+  "description": "Mocha wrapper that allows running TypeScript tests using TypeScript runtime (ts-node) to get rid of compilation complexity",
   "repository": "https://github.com/piotrwitek/ts-mocha",
   "author": "Piotr Witek <piotrek.witek@gmail.com> (http://piotrwitek.github.io)",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "bin": "dist/cli.js",
+  "bin": "./bin/ts-mocha",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">= 0.10.x"
+  },
+  "scripts": {
+    "prepublishOnly": "yarn run clean && yarn && yarn start",
+    "clean": "rm -rf node_modules/",
+    "start": "./bin/ts-mocha -p test test/**/*.spec.ts",
+    "test": "echo \"Yet no tests was needed.\""
+  },
+  "dependencies": {
+    "ts-node": "^1.7.2"
+  },
+  "devDependencies": {
+    "@types/expect": "^1.13.31",
+    "@types/mocha": "^2.2.33",
+    "@types/node": "^0.0.2",
+    "expect": "^1.20.2",
+    "husky": "^0.11.9",
+    "mocha": "^3.2.0",
+    "tslint": "^4.0.2",
+    "typescript": "^2.1.4"
+  },
+  "peerDependencies": {
+    "mocha": "^3.2.0"
   },
   "files": [
-    "dist/",
+    "bin/",
+    "src/",
     "package.json",
     "README.md",
     "LICENSE",
     "yarn.lock"
   ],
-  "scripts": {
-    "precommit": "npm run lint && npm run tsc",
-    "prepush": "npm run test",
-    "prepublishOnly": "yarn run clean && yarn && yarn run build",
-    "clean": "rm -rf node_modules/",
-    "dev": "ts-node -P src/ src/index.ts",
-    "build": "rm -rf dist/ && tsc -p src/",
-    "start": "node dist/index.js",
-    "lint": "tslint 'src/**/*.ts'",
-    "tsc": "tsc -p src/ --noEmit",
-    "test": "echo \"Yet no tests was needed.\""
-  },
-  "dependencies": {
-    "mocha": "^3.2.0"
-  },
-  "devDependencies": {
-    "@types/mocha": "^2.2.33",
-    "husky": "^0.11.9",
-    "ts-node": "^1.7.2",
-    "tslint": "^4.0.2",
-    "typescript": "^2.1.4"
-  },
   "keywords": [
     "ts",
     "mocha",
