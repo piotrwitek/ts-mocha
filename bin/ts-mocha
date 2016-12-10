@@ -1,0 +1,45 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var path = require('path');
+var spawn = require('child_process').spawn;
+
+var MOCHA_PATH = '../node_modules/mocha/bin/mocha';
+var args = [
+  path.join(__dirname, MOCHA_PATH),
+  '-r',
+  path.join(__dirname, '../src/index.js'),
+];
+
+console.log(process.argv);
+
+process.argv.slice(2).forEach(function (arg, idx, arr) {
+  switch (arg) {
+    case '-p':
+    case '--project':
+      process.env.__TS_PROJECT_PATH__ = arr[idx + 1];
+      break;
+    default:
+      args.push(arg);
+      break;
+  }
+});
+
+var mocha = spawn(process.execPath, args, {
+  stdio: 'inherit',
+});
+mocha.on('exit', function (code, signal) {
+  process.on('exit', function () {
+    if (signal) {
+      process.kill(process.pid, signal);
+    } else {
+      process.exit(code);
+    }
+  });
+});
+
+process.on('SIGINT', function () {
+  mocha.kill('SIGINT');
+  mocha.kill('SIGTERM');
+});
