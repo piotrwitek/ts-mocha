@@ -1,15 +1,50 @@
 {
   "name": "ts-mocha",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Mocha wrapped in TypeScript for easy use in TypeScript Projects",
-  "main": "index.js",
   "repository": "https://github.com/piotrwitek/ts-mocha",
   "author": "Piotr Witek <piotrek.witek@gmail.com> (http://piotrwitek.github.io)",
   "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "bin": "dist/cli.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "yarn.lock"
+  ],
+  "scripts": {
+    "precommit": "npm run lint && npm run tsc",
+    "prepush": "npm run test",
+    "prepublishOnly": "yarn run clean && yarn && yarn run build",
+    "clean": "rm -rf node_modules/",
+    "dev": "ts-node -P src/ src/index.ts",
+    "build": "rm -rf dist/ && tsc -p src/",
+    "start": "node dist/index.js",
+    "lint": "tslint 'src/**/*.ts'",
+    "tsc": "tsc -p src/ --noEmit",
+    "test": "echo \"Yet no tests was needed.\""
+  },
   "dependencies": {
     "mocha": "^3.2.0"
   },
   "devDependencies": {
-    "@types/mocha": "^2.2.33"
-  }
+    "@types/mocha": "^2.2.33",
+    "husky": "^0.11.9",
+    "ts-node": "^1.7.2",
+    "tslint": "^4.0.2",
+    "typescript": "^2.1.4"
+  },
+  "keywords": [
+    "ts",
+    "mocha",
+    "typescript",
+    "ts-node",
+    "test"
+  ]
 }
