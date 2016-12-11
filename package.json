@@ -12,7 +12,7 @@
     "node": ">= 0.10.x"
   },
   "scripts": {
-    "prepublishOnly": "yarn run clean && yarn && yarn start",
+    "prepublishOnly": "yarn run clean && yarn install --production && yarn add -D mocha && yarn start",
     "clean": "rm -rf node_modules/",
     "start": "./bin/ts-mocha -p test test/**/*.spec.ts",
     "test": "echo \"Yet no tests was needed.\""
