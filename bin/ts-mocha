@@ -5,9 +5,9 @@
 var path = require('path');
 var spawn = require('child_process').spawn;
 
-var MOCHA_PATH = '../node_modules/mocha/bin/mocha';
+var MOCHA_PATH = require.resolve('mocha/bin/mocha');
 var args = [
-  path.join(__dirname, MOCHA_PATH),
+  MOCHA_PATH,
   '-r',
   path.join(__dirname, '../src/index.js'),
 ];
