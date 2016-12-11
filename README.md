@@ -1,5 +1,5 @@
 # TS-Mocha
-> Mocha thin wrapper that allows running TypeScript tests using TypeScript runtime (ts-node) to get rid of compilation complexity.
+> Mocha thin wrapper that allows running TypeScript tests with TypeScript runtime (ts-node) to get rid of compilation complexity.
 > All Mocha features are available without any limitation.
 
 ### Why?
