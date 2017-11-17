@@ -1,4 +1,6 @@
 # TS-Mocha
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/piotrwitek/ts-mocha.svg)](https://greenkeeper.io/)
 > Mocha thin wrapper that allows running TypeScript tests with TypeScript runtime (ts-node) to get rid of compilation complexity.
 > All Mocha features are available without any limitation.
 
