@@ -34,14 +34,13 @@ npm i -g ts-mocha
 
 ## In code scripts
 
-In code you can use ts-mocha by adding a single require in yoru script:
+In code you can use ts-mocha by adding a single require at the beginning of your script:
 
 ```javascript
 require('ts-mocha');
 ```
 
 For example:
-
 
 ```javascript
 require('ts-mocha');
