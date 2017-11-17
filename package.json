@@ -13,23 +13,23 @@
     "node": ">= 0.10.x"
   },
   "scripts": {
-    "prepublishOnly": "yarn run clean && yarn install --production && yarn add -D mocha && yarn start",
     "clean": "rm -rf node_modules/",
-    "start": "./bin/ts-mocha -p test test/**/*.spec.ts",
-    "test": "echo \"Yet no tests was needed.\""
+    "reinstall": "yarn run clean && yarn install",
+    "test": "./bin/ts-mocha -p test test/**/*.spec.ts",
+    "prepublishOnly": "yarn run clean && yarn install --production && yarn add -D mocha && yarn test"
   },
   "dependencies": {
     "ts-node": "^3.3.0"
   },
   "devDependencies": {
-    "@types/expect": "^1.13.31",
-    "@types/mocha": "^2.2.33",
-    "@types/node": "^8.0.53",
-    "expect": "^21.2.1",
-    "husky": "^0.14.3",
-    "mocha": "^4.0.1",
-    "tslint": "^5.8.0",
-    "typescript": "^2.1.4"
+    "@types/expect": "1.20.2",
+    "@types/mocha": "2.2.44",
+    "@types/node": "8.0.53",
+    "expect": "21.2.1",
+    "husky": "0.14.3",
+    "mocha": "4.0.1",
+    "tslint": "5.8.0",
+    "typescript": "2.6.1"
   },
   "peerDependencies": {
     "mocha": "^3.2.0"
