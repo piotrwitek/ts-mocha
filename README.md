@@ -19,15 +19,36 @@ TS-Mocha has one only dependency - ts-node, which is used as a TypeScript runtim
 ### Installation
 
 - Local:
-```
+```bash
 # remember to install mocha if you don't have it already (npm i -D mocha)
 npm i -D ts-mocha
 `./node_modules/.bin/ts-mocha -p src/ src/**/*.spec.ts`
 ```
 
 - Global:
-```
+```bash
 # remember to install mocha if you don't have it already (npm i -g mocha)
 npm i -g ts-mocha
 `ts-mocha -p src/ src/**/*.spec.ts`
+```
+
+## In code scripts
+
+In code you can use ts-mocha by adding a single require at the beginning of your script:
+
+```javascript
+require('ts-mocha');
+```
+
+For example:
+
+```javascript
+require('ts-mocha');
+const Mocha = require('mocha');
+mocha.addFile(`yourfile.test.ts`);
+mocha.run((failures) => {
+    process.on('exit', () => {
+        process.exit(failures); // exit with non-zero status if there were failures
+    });
+});
 ```
