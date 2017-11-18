@@ -22,28 +22,32 @@ TS-Mocha has one only dependency - ts-node, which is used as a TypeScript runtim
 
 > __PRO TIP__: To make your developer experience better I recommend to run type-checking in a separate process by starting TSC compiler (preferably in watch mode) in you terminal with --noEmit and --project flags.
 
-### Options:
-`-p, --project <value>` - relative or absolute path to directory containing `tsconfig.json` (equivalent of `tsc -p <value>`) [default: "."]
+## Installation
 
-### Installation
-
-- Local:
 ```bash
-# remember to install mocha if you don't have it already installed (npm i -D mocha)
+# remember to install mocha if you don't have it already (npm i -D mocha)
+
 npm i -D ts-mocha
-# run locally using
-./node_modules/.bin/ts-mocha -p src/ src/**/*.spec.ts
+
+# you should also install types
+npm i -D @types/mocha @types/expect
 ```
 
-- Global:
+## Usage
+
+### - CLI Usage:
+
+All options supported by Mocha plus one extra below:
+
+`-p, --project <value>` - relative or absolute path to directory containing `tsconfig.json` (equivalent of `tsc -p <value>`) [default: "."]
+
+For example:
+
 ```bash
-# remember to install mocha if you don't have it already isntalled (npm i -g mocha)
-npm i -g ts-mocha
-# run using
 ts-mocha -p src/ src/**/*.spec.ts
 ```
 
-### For programmatic use:
+### - Programmatic usage:
 
 In code you can use ts-mocha by adding a single require at the beginning of your script:
 
