@@ -2,8 +2,8 @@
   "compilerOptions": {
     "outDir": "dist/", // target for compiled files
     "allowSyntheticDefaultImports": true, // no errors on commonjs default import
-    "allowJs": true, // include js files
-    "checkJs": true, // typecheck js files
+    "allowJs": false, // include js files
+    "checkJs": false, // typecheck js files
     "declaration": false, // don't emit declarations
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
