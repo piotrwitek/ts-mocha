@@ -2,6 +2,7 @@
 [![NPM Downloads](https://img.shields.io/npm/dt/ts-mocha.svg)](https://www.npmjs.com/package/ts-mocha)
 [![NPM Downloads](https://img.shields.io/npm/dm/ts-mocha.svg)](https://www.npmjs.com/package/ts-mocha)
 
+[![Codeship](https://img.shields.io/codeship/4164f690-ae0f-0135-f19a-42bf4c766088.svg)](https://app.codeship.com/projects/257364)
 [![Greenkeeper badge](https://badges.greenkeeper.io/piotrwitek/ts-mocha.svg)](https://greenkeeper.io/)
 [![Dependency Status](https://img.shields.io/david/piotrwitek/ts-mocha.svg)](https://david-dm.org/piotrwitek/ts-mocha)
 [![peerDependency Status](https://img.shields.io/david/peer/piotrwitek/ts-mocha.svg)](https://david-dm.org/piotrwitek/ts-mocha#info=devDependencies)
