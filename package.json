@@ -30,7 +30,7 @@
     "expect": "21.2.1",
     "husky": "0.14.3",
     "mocha": "4.0.1",
-    "tslint": "5.8.0",
+    "tslint": "5.9.0",
     "typescript": "2.6.1"
   },
   "peerDependencies": {
