@@ -28,7 +28,7 @@
     "@types/mocha": "2.2.44",
     "@types/node": "8.0.53",
     "expect": "21.2.1",
-    "husky": "0.14.3",
+    "husky": "0.15.0-rc.2",
     "mocha": "4.0.1",
     "tslint": "5.8.0",
     "typescript": "2.6.1"
