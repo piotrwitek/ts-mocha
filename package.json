@@ -24,7 +24,7 @@
     "ts-node": "^3.3.0"
   },
   "devDependencies": {
-    "@types/expect": "1.20.2",
+    "@types/expect": "1.20.3",
     "@types/mocha": "2.2.44",
     "@types/node": "8.0.53",
     "expect": "21.2.1",
