@@ -1,8 +1,7 @@
 {
   "name": "ts-mocha",
-  "version": "1.1.0",
-  "description":
-    "Mocha thin wrapper that allows running TypeScript tests with TypeScript runtime (ts-node) to get rid of compilation complexity",
+  "version": "1.2.0",
+  "description": "Mocha thin wrapper that allows running TypeScript tests with TypeScript runtime (ts-node) to get rid of compilation complexity",
   "repository": "https://github.com/piotrwitek/ts-mocha",
   "author": "Piotr Witek <piotrek.witek@gmail.com> (http://piotrwitek.github.io)",
   "license": "MIT",
@@ -37,6 +36,19 @@
   "peerDependencies": {
     "mocha": "^3.X.X || ^4.X.X || ^5.X.X"
   },
-  "files": ["bin/", "src/", "package.json", "README.md", "LICENSE", "yarn.lock"],
-  "keywords": ["ts", "mocha", "typescript", "ts-node", "test"]
+  "files": [
+    "bin/",
+    "src/",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "yarn.lock"
+  ],
+  "keywords": [
+    "ts",
+    "mocha",
+    "typescript",
+    "ts-node",
+    "test"
+  ]
 }
