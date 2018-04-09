@@ -11,10 +11,7 @@
     "importHelpers": true, // importing helper functions from tslib
     "noEmitHelpers": true, // disable emitting inline helper functions
     "jsx": "react", // process JSX
-    "lib": [
-      "es2016",
-      "es2017.object"
-    ],
+    "lib": ["es2016", "es2017.object"],
     "target": "es5", // "es2015" for ES6+ engines
     "module": "commonjs", // "es2015" for tree-shaking
     "moduleResolution": "node",
@@ -29,11 +26,6 @@
     "removeComments": true,
     "sourceMap": true
   },
-  "include": [
-    "**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.*"
-  ]
+  "include": ["**/*"],
+  "exclude": ["node_modules", "**/*.spec.*"]
 }
