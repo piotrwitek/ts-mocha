@@ -50,5 +50,15 @@
     "typescript",
     "ts-node",
     "test"
-  ]
+  ],
+  "greenkeeper": {
+    "ignore": [
+      "@types/expect",
+      "@types/mocha",
+      "@types/node",
+      "expect",
+      "husky",
+      "tslint",
+    ]
+  }
 }
