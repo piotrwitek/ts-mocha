@@ -58,7 +58,7 @@
       "@types/node",
       "expect",
       "husky",
-      "tslint",
+      "tslint"
     ]
   }
 }
