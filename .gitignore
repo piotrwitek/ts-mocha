@@ -39,3 +39,4 @@ jspm_packages
 # Custom
 dist
 .DS_Store
+.vscode
