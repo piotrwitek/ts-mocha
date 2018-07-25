@@ -24,7 +24,11 @@
     "strictNullChecks": true,
     "pretty": true,
     "removeComments": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
   "include": ["**/*"],
   "exclude": ["node_modules", "**/*.spec.*"]
