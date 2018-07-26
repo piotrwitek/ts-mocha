@@ -21,7 +21,8 @@
     "prepublishOnly": "yarn run clean && yarn install --production && yarn add -D mocha && yarn test"
   },
   "dependencies": {
-    "ts-node": "3.3.0"
+    "ts-node": "3.3.0",
+    "tsconfig-paths": "^3.4.2"
   },
   "devDependencies": {
     "@types/expect": "1.20.3",

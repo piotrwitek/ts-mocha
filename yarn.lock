@@ -169,6 +169,10 @@ debug@3.1.0:
   dependencies:
     ms "2.0.0"
 
+deepmerge@^2.0.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.1.1.tgz#e862b4e45ea0555072bf51e7fd0d9845170ae768"
+
 diff@3.5.0, diff@^3.1.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
@@ -626,7 +630,7 @@ strip-indent@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/strip-indent/-/strip-indent-2.0.0.tgz#5ef8db295d01e6ed6cbf7aab96998d7822527b68"
 
-strip-json-comments@^2.0.0:
+strip-json-comments@^2.0.0, strip-json-comments@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
@@ -666,6 +670,15 @@ ts-node@3.3.0:
     tsconfig "^6.0.0"
     v8flags "^3.0.0"
     yn "^2.0.0"
+
+tsconfig-paths@^3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.4.2.tgz#4640bffaeee3fc0ab986607edae203859156a8c3"
+  dependencies:
+    deepmerge "^2.0.1"
+    minimist "^1.2.0"
+    strip-bom "^3.0.0"
+    strip-json-comments "^2.0.1"
 
 tsconfig@^6.0.0:
   version "6.0.0"
