@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./helper/*"], // Map the @ folder to the helper folder
+      "@util": ["./helper/util.ts"] // Map @util to the util module
+    }
+  }
+}
