@@ -16,8 +16,14 @@ process.argv.slice(2).forEach(function (arg, idx, arr) {
   switch (arg) {
     case '-p':
     case '--project':
-      process.env.__TS_PROJECT_PATH__ = arr[idx + 1];
+      const tsconfigPath = arr[idx + 1];
+      process.env.__TS_PROJECT_PATH__ = tsconfigPath;
       break;
+
+    case '--paths':
+      process.env.TS_NODE_PROJECT = '.';
+      break;
+
     default:
       args.push(arg);
       break;
