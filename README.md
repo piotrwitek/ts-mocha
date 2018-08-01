@@ -37,14 +37,25 @@ npm i -D @types/mocha @types/expect
 
 ### - CLI Usage:
 
-All options supported by Mocha plus one extra below:
+CLI options consist of all the options of regular Mocha plus extra options below:
 
 `-p, --project <value>` - relative or absolute path to directory containing `tsconfig.json` (equivalent of `tsc -p <value>`) [default: "."]
 
-For example:
-
+Example:
 ```bash
 ts-mocha -p src/ src/**/*.spec.ts
+```
+
+`--paths` - feature toggle flag to enable [`tsconfig-paths`](https://www.npmjs.com/package/tsconfig-paths) integration [default: false]
+> `tsconfig-paths` is an optional dependency, make sure to install it locally in your project
+
+When using [path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping) via the `paths` compiler option in `tsconfig.json` this library utilizes the [`tsconfig-paths`](https://www.npmjs.com/package/tsconfig-paths) package, allowing for automatic resolution of aliased modules locations during test execution.
+
+Check our test suite for a reference implementation: [Link](./test/paths/tsconfig.json)
+
+**Example:**
+```bash
+ts-mocha --paths -p src/ src/**/*.spec.ts
 ```
 
 ### - Programmatic usage:
@@ -52,8 +63,12 @@ ts-mocha -p src/ src/**/*.spec.ts
 In code you can use ts-mocha by adding a single require at the beginning of your script:
 
 ```javascript
-// set custom tsconfig.json path, before registering (default: '.')
+// set env variable with tsconfig.json path before loading mocha (default: '.')
 process.env.__TS_PROJECT_PATH__ = './src';
+
+// Optional: set env variable to enable `tsconfig-paths` integration
+// process.env.TS_NODE_PROJECT = './test/paths';
+
 // register mocha wrapper
 require('ts-mocha');
 ```

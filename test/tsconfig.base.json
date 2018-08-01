@@ -26,10 +26,5 @@
     "removeComments": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    }
   },
-  "include": ["**/*"],
-  "exclude": ["node_modules", "**/*.spec.*"]
 }
