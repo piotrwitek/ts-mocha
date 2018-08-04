@@ -27,13 +27,13 @@
   },
   "devDependencies": {
     "@types/expect": "1.20.3",
-    "@types/mocha": "5.1.0",
-    "@types/node": "9.6.2",
-    "expect": "22.4.3",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.5.6",
+    "expect": "^23.4.0",
     "husky": "0.14.3",
     "mocha": "^5.2.0",
-    "tslint": "5.9.1",
-    "typescript": "2.8.1"
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
   },
   "peerDependencies": {
     "mocha": "^3.X.X || ^4.X.X || ^5.X.X"
