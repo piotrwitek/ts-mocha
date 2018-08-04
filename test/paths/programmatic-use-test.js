@@ -1,5 +1,5 @@
-process.env.__TS_PROJECT_PATH__ = './test/paths';
-process.env.TS_NODE_PROJECT = './test/paths';
+process.env.TS_NODE_PROJECT = './test/paths/tsconfig.json';
+process.env.TS_CONFIG_PATHS = true;
 require('../..');
 const Mocha = require('mocha');
 const path = require('path');

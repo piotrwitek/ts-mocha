@@ -1,13 +1,12 @@
 try {
   // default ts-node config
-  const project = process.env.__TS_PROJECT_PATH__ || '.';
+  const project = process.env.TS_NODE_PROJECT || './tsconfig.json';
   require('ts-node').register({
     project,
-    fast: true,
+    transpileOnly: true,
   });
   // opt-in tsconfig-paths config
-  if (process.env.TS_NODE_PROJECT) {
-    process.env.TS_NODE_PROJECT = project;
+  if (process.env.TS_CONFIG_PATHS) {
     require('tsconfig-paths/register');
   }
 } catch (error) {

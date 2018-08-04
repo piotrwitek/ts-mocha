@@ -1,6 +1,6 @@
 {
   "name": "ts-mocha",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Mocha thin wrapper that allows running TypeScript tests with TypeScript runtime (ts-node) to get rid of compilation complexity",
   "repository": "https://github.com/piotrwitek/ts-mocha",
   "author": "Piotr Witek <piotrek.witek@gmail.com> (http://piotrwitek.github.io)",
@@ -10,15 +10,15 @@
     "ts-mocha": "./bin/ts-mocha"
   },
   "engines": {
-    "node": ">= 0.10.x"
+    "node": ">= 6.X.X"
   },
   "scripts": {
     "clean": "rm -rf node_modules/",
     "reinstall": "yarn run clean && yarn install",
     "pretest:baseline": "yarn install --peer",
-    "test:baseline": "./bin/ts-mocha -p ./test/baseline/ test/baseline/**/*.spec.ts && node test/baseline/programmatic-use-test.js",
+    "test:baseline": "./bin/ts-mocha -p test/baseline/tsconfig.json test/baseline/**/*.spec.ts && node test/baseline/programmatic-use-test.js",
     "pretest:paths": "yarn install --optional",
-    "test:paths": "./bin/ts-mocha --paths -p test/paths/ test/paths/**/*.spec.ts && node test/paths/programmatic-use-test.js",
+    "test:paths": "./bin/ts-mocha --paths -p test/paths/tsconfig.json test/paths/**/*.spec.ts && node test/paths/programmatic-use-test.js",
     "test": "npm run test:baseline & npm run test:paths",
     "prepublishOnly": "yarn run clean && yarn install --production && yarn add -D mocha && yarn test"
   },
@@ -46,6 +46,7 @@
     "src/",
     "package.json",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE",
     "yarn.lock"
   ],
