@@ -1,6 +1,9 @@
 try {
   // default ts-node config
-  const project = process.env.TS_NODE_PROJECT || process.env._TS_PROJECT_PATH__ || './tsconfig.json';
+  const project =
+    process.env.TS_NODE_PROJECT ||
+    process.env._TS_PROJECT_PATH__ ||
+    './tsconfig.json';
   require('ts-node').register({
     project,
     transpileOnly: true,
