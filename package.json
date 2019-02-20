@@ -23,17 +23,17 @@
     "prepublishOnly": "npm run clean && npm install --production && npm install -D mocha && npm test"
   },
   "dependencies": {
-    "ts-node": "7.0.0"
+    "ts-node": "7.0.1"
   },
   "devDependencies": {
-    "@types/expect": "1.20.3",
-    "@types/mocha": "^5.2.5",
+    "@types/expect": "1.20.4",
+    "@types/mocha": "5.2.6",
     "@types/node": "^10.5.6",
     "expect": "^23.4.0",
     "husky": "0.14.3",
-    "mocha": "^6.0.0",
-    "tslint": "^5.11.0",
-    "typescript": "^3.0.1"
+    "mocha": "6.0.0",
+    "tslint": "5.12.1",
+    "typescript": "3.3.3"
   },
   "peerDependencies": {
     "mocha": "^3.X.X || ^4.X.X || ^5.X.X || ^6.X.X"
