@@ -23,7 +23,7 @@
     "prepublishOnly": "npm run clean && npm install --production && npm install -D mocha && npm test"
   },
   "dependencies": {
-    "ts-node": "7.0.1"
+    "ts-node": "8.0.3"
   },
   "devDependencies": {
     "@types/expect": "1.20.4",
