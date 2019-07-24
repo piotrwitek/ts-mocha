@@ -58,6 +58,14 @@ Check our test suite for a reference implementation: [Link](./test/paths/tsconfi
 ts-mocha --paths -p src/ src/**/*.spec.ts
 ```
 
+### Watch Mode:
+If you want your tests to be automatically rerun when your code changes, add both the `-w` flag and the `--watch-extensions` flag telling it to watch for typescript files.
+
+**Example:**
+```bash
+ts-mocha --paths -p src/ src/**/*.spec.ts -w --watch-extensions ts
+```
+
 ### - Programmatic usage:
 
 In code you can use ts-mocha by adding a single require at the beginning of your script:
