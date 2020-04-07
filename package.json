@@ -1,6 +1,6 @@
 {
   "name": "ts-mocha",
-  "version": "7.0.0",
+  "version": "8.8.2",
   "description": "Mocha thin wrapper that allows running TypeScript tests with TypeScript runtime (ts-node) to get rid of compilation complexity",
   "repository": "https://github.com/piotrwitek/ts-mocha",
   "author": "Piotr Witek <piotrek.witek@gmail.com> (http://piotrwitek.github.io)",
@@ -23,23 +23,23 @@
     "prepublishOnly": "npm run clean && npm install --production && npm install -D mocha && npm test"
   },
   "dependencies": {
-    "ts-node": "7.0.1"
+    "ts-node": "8.8.2"
   },
   "devDependencies": {
-    "@types/expect": "1.20.4",
-    "@types/mocha": "5.2.6",
-    "@types/node": "^10.5.6",
-    "expect": "^23.4.0",
-    "husky": "0.14.3",
-    "mocha": "6.0.2",
-    "tslint": "5.12.1",
-    "typescript": "3.3.3"
+    "@types/expect": "24.3.0",
+    "@types/mocha": "7.0.2",
+    "@types/node": "^13.11.0",
+    "expect": "^25.2.7",
+    "husky": "4.2.3",
+    "mocha": "^6.2.3",
+    "tslint": "6.1.1",
+    "typescript": "3.8.3"
   },
   "peerDependencies": {
     "mocha": "^3.X.X || ^4.X.X || ^5.X.X || ^6.X.X || ^7.X.X"
   },
   "optionalDependencies": {
-    "tsconfig-paths": "^3.5.0"
+    "tsconfig-paths": "^3.9.0"
   },
   "files": [
     "bin/",
