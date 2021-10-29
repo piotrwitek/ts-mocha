@@ -41,7 +41,7 @@ CLI options consist of all the options of regular Mocha plus extra options below
 
 `-p, --project <value>` - relative or absolute path to a `tsconfig.json` file (equivalent of `tsc -p <value>`) [default: "./tsconfig.json"]
 
-Example:
+**Example:**
 ```bash
 ts-mocha -p src/tsconfig.json src/**/*.spec.ts
 ```
@@ -56,6 +56,15 @@ Check our test suite for a reference implementation: [Link](./test/paths/tsconfi
 **Example:**
 ```bash
 ts-mocha --paths -p src/ src/**/*.spec.ts
+```
+
+`--type-check` - feature toggle flag to enable type checking in ts-node [default: false]
+
+By default ts-mocha uses the `--transpile-only` option of ts-node to make tests run faster. Use the `--type-check` option to enable type checking in ts-node.
+
+**Example:**
+```bash
+ts-mocha --type-check -p src/ src/**/*.spec.ts
 ```
 
 ### Watch Mode:
