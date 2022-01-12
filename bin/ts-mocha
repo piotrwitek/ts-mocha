@@ -15,7 +15,7 @@ process.argv.slice(2).forEach(function (arg, idx, arr) {
       const projectArgValueIdx = idx + 1;
       const tsconfigPath = arr[projectArgValueIdx];
       // remove tsconfigPath param from array parsing
-      array.splice(projectArgValueIdx, 1);
+      arr.splice(projectArgValueIdx, 1);
 
       process.env.TS_NODE_PROJECT = tsconfigPath;
       break;
