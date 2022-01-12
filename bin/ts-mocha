@@ -14,17 +14,21 @@ var args = [
 
 process.argv.slice(2).forEach(function (arg, idx, arr) {
   switch (arg) {
-    case '-p':
-    case '--project':
-      const tsconfigPath = arr[idx + 1];
+    case "-p":
+    case "--project":
+      const projectArgValueIdx = idx + 1;
+      const tsconfigPath = arr[projectArgValueIdx];
+      // remove tsconfigPath param from array parsing
+      array.splice(projectArgValueIdx, 1);
+
       process.env.TS_NODE_PROJECT = tsconfigPath;
       break;
 
-    case '--paths':
+    case "--paths":
       process.env.TS_CONFIG_PATHS = true;
       break;
-    
-    case '--type-check':
+
+    case "--type-check":
       process.env.TS_TYPE_CHECK = true;
       break;
 
