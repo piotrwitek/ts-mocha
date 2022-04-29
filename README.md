@@ -68,11 +68,11 @@ ts-mocha --type-check -p src/ src/**/*.spec.ts
 ```
 
 ### Watch Mode:
-If you want your tests to be automatically rerun when your code changes, add both the `-w` flag and the `--watch-extensions` flag telling it to watch for typescript files.
+If you want your tests to be automatically rerun when your code changes, add both the `-w` flag and the `--watch-files` flag telling it to watch for typescript files.
 
 **Example:**
 ```bash
-ts-mocha --paths -p src/ src/**/*.spec.ts -w --watch-extensions ts
+ts-mocha test/**/*.spec.ts -w --watch-files '**/*.ts'
 ```
 
 ### - Programmatic usage:
