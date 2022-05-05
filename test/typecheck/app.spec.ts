@@ -9,5 +9,5 @@ describe('Running TypeScript tests in ts-node runtime with type checks', () => {
   });
 });
 
-// Introduce a compile error.
+// Introduce a compile error to check if test:typecheck will fail
 "not a number" as number;
