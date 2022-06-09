@@ -6,7 +6,8 @@ var path = require('path');
 var spawn = require('child_process').spawn;
 
 var MOCHA_PATH = require.resolve('mocha/bin/mocha');
-var mochaArgs = [MOCHA_PATH, "-r", path.join(__dirname, "../src/index.js")];
+var TS_MOCHA_PATH = path.join(__dirname, "../src/index.js");
+var mochaArgs = [MOCHA_PATH, "--require", TS_MOCHA_PATH];
 
 process.argv.slice(2).forEach(function (arg, idx, arr) {
   switch (arg) {
