@@ -1,4 +1,4 @@
-import * as expect from 'expect';
+import expect from 'expect';
 import app from './app';
 
 describe('Running TypeScript tests in ts-node runtime with type checks', () => {
