@@ -1,0 +1,30 @@
+name: "Continuous Integration"
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  continuous-integration:
+    name: continuous-integration
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        mocha-version: [3, 4, 5, 6, 7, 8, 9, 10]
+        node-version: [14, 16, 18, 19]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version}}
+      - name: install dependencies
+        run: |
+          npm ci
+          npm i mocha@${{ matrix.mocha-version}}
+      - name: test
+        run: |
+          npm test
