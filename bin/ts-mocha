@@ -2,6 +2,7 @@
 
 'use strict';
 
+var os = require('os');
 var path = require('path');
 var spawn = require('child_process').spawn;
 
@@ -41,7 +42,11 @@ var mocha = spawn(process.execPath, mochaArgs, {
 mocha.on('exit', function (code, signal) {
   process.on('exit', function () {
     if (signal) {
-      process.kill(process.pid, signal);
+      if(mochaArgs.includes('--posixExitCodes=true')) {
+        process.exit(128 + os.constants.signals[signal]);
+      } else {
+        process.kill(process.pid, signal);
+      }
     } else {
       process.exit(code);
     }
