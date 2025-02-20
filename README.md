@@ -33,6 +33,9 @@ TS-Mocha has one only dependency - ts-node, which is used as a TypeScript runtim
 
 npm i -D ts-mocha
 
+# remember to install required peerDependencies
+npm i -D mocha ts-node
+
 # install recent Mocha and Expect @types packages for best DX
 npm i -D @types/mocha @types/expect
 ```
@@ -91,26 +94,26 @@ In code you can use ts-mocha by adding a single require at the beginning of your
 
 ```javascript
 // set env variable to the `tsconfig.json` path before loading mocha (default: './tsconfig.json')
-process.env.TS_NODE_PROJECT = './src/tsconfig.json'
+process.env.TS_NODE_PROJECT = "./src/tsconfig.json";
 
 // Optional: set env variable to enable `tsconfig-paths` integration
 process.env.TS_CONFIG_PATHS = true;
 
 // register mocha wrapper
-require('ts-mocha');
+require("ts-mocha");
 ```
 
 For example:
 
 ```javascript
-process.env.TS_NODE_PROJECT = './src/tsconfig.json';
-require('ts-mocha');
-const Mocha = require('mocha');
+process.env.TS_NODE_PROJECT = "./src/tsconfig.json";
+require("ts-mocha");
+const Mocha = require("mocha");
 
 const mocha = new Mocha();
 mocha.addFile(`./src/file.spec.ts`);
 mocha.run((failures) => {
-  process.on('exit', () => {
+  process.on("exit", () => {
     process.exit(failures); // exit with non-zero status if there were failures
   });
 });
