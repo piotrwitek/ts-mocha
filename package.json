@@ -15,12 +15,10 @@
   "scripts": {
     "clean": "rm -rf node_modules/",
     "reinstall": "npm run clean && npm install",
-    "pretest:baseline": "npm install --peer",
-    "test:baseline": "./bin/ts-mocha -p test/baseline/tsconfig.json test/baseline/**/*.spec.ts test/typecheck/**/*.spec.ts && node test/baseline/programmatic-use-test.js",
-    "pretest:paths": "npm install --optional",
+    "test:baseline": "./bin/ts-mocha -p test/baseline/tsconfig.json test/baseline/**/*.spec.ts && node test/baseline/programmatic-use-test.js",
     "test:paths": "./bin/ts-mocha --paths -p test/paths/tsconfig.json test/paths/**/*.spec.ts && node test/paths/programmatic-use-test.js",
     "test:typecheck": "if ./bin/ts-mocha --type-check -p test/typecheck/tsconfig.json test/typecheck/**/*.spec.ts; then exit 1; fi && node test/typecheck/programmatic-use-test.js",
-    "test": "npm run test:baseline & npm run test:paths & npm run test:typecheck",
+    "test": "npm run test:baseline && npm run test:paths && npm run test:typecheck",
     "prepublishOnly": "npm run clean && npm install --production && npm install -D mocha && npm test"
   },
   "devDependencies": {
