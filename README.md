@@ -3,8 +3,6 @@
 [![Latest Stable Version](https://img.shields.io/npm/v/ts-mocha.svg)](https://www.npmjs.com/package/ts-mocha)
 [![NPM Downloads](https://img.shields.io/npm/dt/ts-mocha.svg)](https://www.npmjs.com/package/ts-mocha)
 [![NPM Downloads](https://img.shields.io/npm/dm/ts-mocha.svg)](https://www.npmjs.com/package/ts-mocha)
-[![Codeship Status for piotrwitek/ts-mocha](https://app.codeship.com/projects/cb8cc460-1719-0137-28fd-3a09a0997096/status?branch=master)](https://app.codeship.com/projects/328034)
-[![Greenkeeper badge](https://badges.greenkeeper.io/piotrwitek/ts-mocha.svg)](https://greenkeeper.io/)
 
 > `ts-mocha` is a streamlined process wrapper for mocha that simplifies running tests written in TypeScript. It automatically handles the necessary configuration and adds custom arguments, saving you from the hassle of managing a complex test setup in your project.
 
